@@ -1,5 +1,4 @@
 import {Component} from 'react'
-import jwt from 'jsonwebtoken'
 
 import './index.css'
 
@@ -90,10 +89,6 @@ class LoginForm extends Component {
     )
 
     if (user) {
-      const token = jwt.sign({username}, 'secret_key')
-
-      localStorage.setItem('token', token)
-
       this.onLoginSuccess()
     } else {
       this.onSubmitFailure('Invalid username or password')
