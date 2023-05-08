@@ -1,0 +1,109 @@
+.icon-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
+
+.icon-container {
+  font-size: 24px;
+}
+.name-container {
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.name-heading {
+  background-color: black;
+  padding: 10px;
+
+  color: beige;
+  font-size: 15px;
+  font-family: Roboto;
+}
+.card {
+  border-style: solid;
+}
+.bg-container {
+  padding: 10px;
+}
+.label {
+  margin-top: 10px;
+  font-size: 20px;
+  font-family: Arial, Helvetica;
+}
+.input {
+  padding: 10px;
+  border-radius: 5px;
+
+  margin-top: 5px;
+}
+.card1 {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+.hr {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid black;
+}
+.btn {
+  background-color: beige;
+  color: #000;
+  padding: 10px 20px;
+  border-color: #000;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+
+  text-align: center;
+}
+.sub-heading {
+  background-color: gray;
+  padding: 10px;
+  font-style: italic;
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 10px;
+}
+.search-input {
+  padding: 10px;
+  border-radius: 5px;
+}
+.icon {
+  font-size: 20px;
+  color: #000;
+  margin-left: 10px;
+}
+.lawyers-list {
+  list-style: bullet;
+  padding: 10px;
+}
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 600;
+  border-style: solid;
+  background-color: white;
+  border-width: 1px;
+  padding: 5px;
+}
+.delete-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #999;
+  font-size: 20px;
+}

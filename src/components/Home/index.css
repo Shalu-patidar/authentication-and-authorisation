@@ -1,0 +1,202 @@
+.icon-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
+
+.icon-container {
+  font-size: 24px;
+}
+
+.text-container {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  align-items: center;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 300px;
+  background-color: #f2f2f2;
+  z-index: 1000;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.sidebar.hidden {
+  transform: translateX(-100%);
+}
+
+.sidebar.visible {
+  transform: translateX(0%);
+}
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: right;
+  color: white;
+}
+.calendar-content {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 11px;
+}
+
+.arrow-icon {
+  color: white;
+  font-size: 20px;
+}
+
+.calendar-icon {
+  color: white;
+  font-size: 30px;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.left-arrow-container,
+.right-arrow-container,
+.calendar-icon-container {
+  display: flex;
+  align-items: center;
+}
+.container {
+  padding: 12px;
+}
+.date-container {
+  padding: 15px;
+}
+.case-button {
+  border-style: solid;
+  color: black;
+  border-color: black;
+  margin-left: 20px;
+  border-width: 1px;
+}
+.planner-icon {
+  margin-left: 30px;
+}
+.d-color {
+  color: grey;
+}
+.d-color1 {
+  color: red;
+}
+.d-color2 {
+  color: #f2f2f2;
+}
+.name1 {
+  display: flex;
+  align-items: center;
+}
+.card2 {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2),
+    0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin: auto;
+  max-width: 400px;
+}
+.icons {
+  margin-right: 10px;
+  color: gray;
+}
+
+.span {
+  margin-left: 10px;
+}
+.span1 {
+  margin-left: 10px;
+  color: white;
+}
+
+.card3 {
+  border-radius: 5px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2),
+    0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+
+  margin: auto;
+  max-width: 400px;
+}
+.content {
+  background-color: #f2f2f2;
+  border: solid black;
+  border-width: 1px;
+}
+.f {
+  background-color: black;
+  border-radius: 3px;
+  padding: 8px;
+}
+.card-heading {
+  padding: 5px;
+  border: black solid;
+  border-width: 1px;
+}
+.heading {
+  padding-left: 10px;
+  font-weight: bold;
+}
+.para {
+  padding-left: 10px;
+}
+.para1 {
+  padding-left: 10px;
+}
+.para3 {
+  padding-left: 10px;
+}
+.para4 {
+  padding-left: 10px;
+}
+.big-container {
+  padding: 30px;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  width: 80%;
+  height: 80%;
+  max-width: 600px;
+  max-height: 600px;
+  background-color: white;
+  border-radius: 8px;
+  position: relative;
+}
+
+.modal-content button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: none;
+  background-color: transparent;
+  font-size: 24px;
+  cursor: pointer;
+  color: black;
+}
