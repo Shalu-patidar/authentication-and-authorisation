@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import jwt from 'jsonwebtoken'
 
 import './index.css'
 
@@ -68,8 +69,6 @@ class LoginForm extends Component {
   submitForm = async event => {
     event.preventDefault()
     const {username, password} = this.state
-    // eslint-disable-next-line
-    const userDetails = {username, password}
 
     const users = [
       {
@@ -91,6 +90,10 @@ class LoginForm extends Component {
     )
 
     if (user) {
+      const token = jwt.sign({username}, 'secret_key')
+
+      localStorage.setItem('token', token)
+
       this.onLoginSuccess()
     } else {
       this.onSubmitFailure('Invalid username or password')
