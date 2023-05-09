@@ -1,4 +1,6 @@
 import {Component} from 'react'
+import Cookies from 'js-cookie'
+import {Redirect} from 'react-router-dom'
 
 import './index.css'
 
@@ -18,8 +20,12 @@ class LoginForm extends Component {
     this.setState({password: event.target.value})
   }
 
-  onLoginSuccess = () => {
+  onSubmitSuccess = jwtToken => {
     const {history} = this.props
+
+    Cookies.set('jwt_token', jwtToken, {
+      expires: 30,
+    })
     history.replace('/')
   }
 
@@ -87,9 +93,10 @@ class LoginForm extends Component {
     const user = users.find(
       code => code.username === username && code.password === password,
     )
+    console.log(user)
 
     if (user) {
-      this.onLoginSuccess()
+      this.onSubmitSuccess(user.jwt_token)
     } else {
       this.onSubmitFailure('Invalid username or password')
     }
@@ -97,6 +104,11 @@ class LoginForm extends Component {
 
   render() {
     const {showSubmitError, errorMsg} = this.state
+    const jwtToken = Cookies.get('jwt_token')
+
+    if (jwtToken !== undefined) {
+      return <Redirect to="/" />
+    }
     return (
       <div className="login-container">
         <img

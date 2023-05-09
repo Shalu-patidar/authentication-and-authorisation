@@ -1,5 +1,13 @@
 import {Component} from 'react'
-import {FaSearch, FaTrash, FaArrowLeft, FaHome, FaBars} from 'react-icons/fa'
+import Cookies from 'js-cookie'
+import {
+  FaSearch,
+  FaTrash,
+  FaArrowLeft,
+  FaHome,
+  FaBars,
+  FaSignOutAlt,
+} from 'react-icons/fa'
 import {v4} from 'uuid'
 
 import './index.css'
@@ -16,6 +24,7 @@ class addNew extends Component {
       searchQuery1: '',
       inputVal2: '',
       error: '',
+      isMenuOpen: false,
     }
   }
 
@@ -99,6 +108,18 @@ class addNew extends Component {
     })
   }
 
+  handleMenuClick = () => {
+    this.setState(prevState => ({
+      isMenuOpen: !prevState.isMenuOpen,
+    }))
+  }
+
+  handleLogoutClick = () => {
+    const {history} = this.props
+    Cookies.remove('jwt_token')
+    history.replace('/login')
+  }
+
   render() {
     const {
       inputVal,
@@ -107,6 +128,7 @@ class addNew extends Component {
       inputVal2,
       searchQuery1,
       caseNumber,
+      isMenuOpen,
       // eslint-disable-next-line
       error,
     } = this.state
@@ -136,10 +158,21 @@ class addNew extends Component {
           </div>
           <div>
             <div className="icon-container">
-              <FaBars />
+              <FaBars onClick={this.handleMenuClick} />
             </div>
             <div className="text-container">Menu</div>
           </div>
+
+          {isMenuOpen && (
+            <div className="menu-items">
+              <div className="menu-item">
+                <div className="icon-container">
+                  <FaSignOutAlt onClick={this.handleLogoutClick} />
+                </div>
+                <div className="text-container">Logout</div>
+              </div>
+            </div>
+          )}
         </div>
 
         <div className="bg-container">

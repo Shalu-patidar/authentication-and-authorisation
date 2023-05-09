@@ -10,6 +10,22 @@
 .icon-container {
   font-size: 23px;
 }
+.heading {
+  color: black;
+  font-size: 20px;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+}
+.lawyer-list {
+  list-style: decimal;
+}
+.lawyer-list li {
+  font-size: 15px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  color: black;
+}
 
 .text-container {
   font-size: 16px;
@@ -199,4 +215,7 @@ button {
   font-size: 24px;
   cursor: pointer;
   color: black;
+}
+.i {
+  margin-top: 10px;
 }
